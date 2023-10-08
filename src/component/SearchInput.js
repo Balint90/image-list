@@ -5,6 +5,8 @@ class SearchInput extends React.Component {
     constructor(props) {
         super(props);
         this.state = { entry: '' }
+
+        this.onFormSubmit = this.onFormSubmit.bind(this);
     }
 
     onFormSubmit(event) {
@@ -15,7 +17,7 @@ class SearchInput extends React.Component {
     render() {
         return (
             <div className="ui segment">
-                <form onSubmit={this.onFormSubmit.bind(this)} className="ui form">
+                <form onSubmit={this.onFormSubmit} className="ui form">
                     <div className="field">
                         <div className="ui massive icon input">
                             <input 
